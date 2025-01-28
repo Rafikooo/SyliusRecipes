@@ -1,9 +1,89 @@
 {
-    "aliases": ["marketplace", "marketplace-plugin", "marketplace-suite", "marketplace-suite-plugin"],
+    "aliases": [
+        "marketplace",
+        "marketplace-plugin",
+        "marketplace-suite",
+        "marketplace-suite-plugin"
+    ],
     "bundles": {
-        "Sylius\\MarketplaceSuite\\SyliusMarketplaceSuitePlugin": ["all"]
+        "Sylius\\MarketplaceSuite\\SyliusMarketplaceSuitePlugin": [
+            "all"
+        ]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                repository: App\\Repository\\ChannelRepository",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Channel\\Channel",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                repository: App\\Repository\\CustomerRepository",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Customer\\Customer",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                repository: App\\Repository\\OrderRepository",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Order\\Order",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                controller: Sylius\\MarketplaceSuite\\Component\\Core\\Common\\Controller\\Resource\\OrderController",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Order\\Order",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                repository: App\\Repository\\PaymentRepository",
+            "position": "after_target",
+            "target": "                model: App\\Entity\\Payment\\Payment",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                    repository: App\\Repository\\ProductRepository",
+            "position": "after_target",
+            "target": "                model: App\\Entity\\Product\\Product",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                repository: App\\Repository\\ProductVariantRepository",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Product\\ProductVariant",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                    repository: App\\Repository\\ProductReviewRepository",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Product\\ProductReview",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                repository: App\\Repository\\ShipmentRepository",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Shipping\\Shipment",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/_sylius.yaml",
+            "content": "                repository: App\\Repository\\TaxonRepository",
+            "position": "after_target",
+            "target": "model: App\\Entity\\Taxonomy\\Taxon",
+            "warn_if_missing": true
+        }
+    ]
 }
