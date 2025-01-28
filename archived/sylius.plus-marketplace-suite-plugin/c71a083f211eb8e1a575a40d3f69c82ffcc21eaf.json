@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "sylius/plus-marketplace-suite-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\MarketplaceSuite\\SyliusMarketplaceSuitePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_plus_marketplace_suite_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusMarketplaceSuitePlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_plus_marketplace_suite_plugin.yaml": {
+                    "contents": [
+                        "sylius_marketplace_suite:",
+                        "    resource: \"@SyliusMarketplaceSuitePlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c71a083f211eb8e1a575a40d3f69c82ffcc21eaf"
+        }
+    }
+}

@@ -7,6 +7,13 @@
         "customer-service": "sylius/customer-service-plugin",
         "customerservice": "sylius/customer-service-plugin",
         "loyalty": "sylius/loyalty-plugin",
+        "marketplace": "sylius/plus-marketplace-suite-plugin",
+        "marketplace-plugin": "sylius/plus-marketplace-suite-plugin",
+        "marketplace-suite": "sylius/plus-marketplace-suite-plugin",
+        "marketplace-suite-plugin": "sylius/plus-marketplace-suite-plugin",
+        "marketplaceplugin": "sylius/plus-marketplace-suite-plugin",
+        "marketplacesuite": "sylius/plus-marketplace-suite-plugin",
+        "marketplacesuiteplugin": "sylius/plus-marketplace-suite-plugin",
         "multi-source-inventory": "sylius/multi-source-inventory-plugin",
         "multisourceinventory": "sylius/multi-source-inventory-plugin",
         "multistore": "sylius/multi-store-plugin",
@@ -37,6 +44,9 @@
         "sylius/one-page-checkout-plugin": [
             "0.1"
         ],
+        "sylius/plus-marketplace-suite-plugin": [
+            "2.7"
+        ],
         "sylius/plus-rbac-plugin": [
             "0.1",
             "0.3"
@@ -60,11 +70,11 @@
     "branch": "main",
     "is_contrib": false,
     "_links": {
-        "repository": "github.com/Sylius/SyliusRecipes",
-        "origin_template": "{package}:{version}@github.com/Sylius/SyliusRecipes:main",
-        "recipe_template": "https://raw.githubusercontent.com/Sylius/SyliusRecipes/flex/main/{package_dotted}.{version}.json",
+        "repository": "github.com/Rafikooo/SyliusRecipes",
+        "origin_template": "{package}:{version}@github.com/Rafikooo/SyliusRecipes:main",
+        "recipe_template": "https://raw.githubusercontent.com/Rafikooo/SyliusRecipes/flex/main/{package_dotted}.{version}.json",
         "recipe_template_relative": "{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/Sylius/SyliusRecipes/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/Rafikooo/SyliusRecipes/flex/main/archived/{package_dotted}/{ref}.json",
         "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }
