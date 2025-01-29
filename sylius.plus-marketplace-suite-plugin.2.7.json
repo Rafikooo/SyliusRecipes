@@ -44,14 +44,14 @@
                         "file": "config/packages/_sylius.yaml",
                         "content": "                repository: App\\Repository\\PaymentRepository",
                         "position": "after_target",
-                        "target": "model: App\\Entity\\Payment\\Payment",
+                        "target": "payment:\n            classes:\n                model: App\\Entity\\Payment\\Payment",
                         "warn_if_missing": true
                     },
                     {
                         "file": "config/packages/_sylius.yaml",
                         "content": "                repository: App\\Repository\\ProductRepository",
                         "position": "after_target",
-                        "target": "model: App\\Entity\\Product\\Product",
+                        "target": "product:\n            classes:\n                model: App\\Entity\\Product\\Product",
                         "warn_if_missing": true
                     },
                     {
@@ -285,7 +285,7 @@
                     "executable": false
                 }
             },
-            "ref": "39d6fcbb8a8837632e62652aac005d987feead69"
+            "ref": "6a3dfe75299923e634252fc1c08894b659b6971a"
         }
     }
 }
